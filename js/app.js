@@ -54,7 +54,7 @@ const initialState = {
   ],
 };
 
-const state = JSON.parse(localStorage.getItem('state')) || initialState;
+const state = JSON.parse(localStorage.getItem('todo')) || initialState;
 
 document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const filtersContainer = document.querySelector('.todo-list__filters');
 
   const updateStorageAndRender = () => {
-    localStorage.setItem('state', JSON.stringify(state));
+    localStorage.setItem('todo', JSON.stringify(state));
     render();
   };
 
